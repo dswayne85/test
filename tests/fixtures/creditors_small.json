@@ -1,0 +1,26 @@
+{
+  "case_name": "Sample Debtor 2026",
+  "creditors": [
+    {
+      "name": "Acme Collections LLC",
+      "address_line1": "123 Main St",
+      "address_line2": "Suite 400",
+      "city": "Springfield",
+      "state": "il",
+      "zip": "627010000",
+      "account_number": "ACME-99821",
+      "amount": "$1,250.75",
+      "classification": "unsecured"
+    },
+    {
+      "name": "First National Bank",
+      "address_line1": "987 Market Ave",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60601",
+      "account_number": "  4455-2210  ",
+      "amount": 8400,
+      "classification": "secured"
+    }
+  ]
+}
