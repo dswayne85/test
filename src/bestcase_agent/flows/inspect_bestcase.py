@@ -29,7 +29,7 @@ def run_inspection(config: AppConfig) -> Path:
 
     adapter = BestCaseAdapter(config)
     summary_lines: List[str] = [
-        f"# Best Case inspection report",
+        "# Best Case inspection report",
         f"run_id: {session.run_id}",
         f"timestamp: {datetime.now().isoformat(timespec='seconds')}",
         f"backend: {config.backend.value}",

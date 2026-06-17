@@ -9,7 +9,6 @@ creditor dialog (which is already mapped to placeholder selectors).
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Optional
 
 from ..adapters.bestcase_adapter import BestCaseAdapter
 from ..app.screenshots import capture
