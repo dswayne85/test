@@ -64,11 +64,12 @@ Executed a full E-E-A-T and structured-data upgrade across the **entire blog arc
 
 - **"About the author" bio block** — George F. McCranie IV, Founder; admitted to the Georgia State Bar 1996; former Assistant District Attorney, Alapaha Judicial Circuit; member of the National College for DUI Defense; fellow of the Lawyers Foundation of Georgia; former State Bar of Georgia Board of Governors member.
 - **"Published / Last reviewed" dateline** with machine-readable `<time>` markup (e.g., "Published 2018-06-06 · Last reviewed August 3, 2026").
-- **Article JSON-LD schema** embedded per post: headline, URL, `mainEntityOfPage`, `datePublished`, `dateModified`, `lastReviewed`, `author` as a `Person` (linked to the attorney's about page, `worksFor` the `LegalService` "McCranie Law Firm"), `publisher` `Organization` with logo, `inLanguage`, and `isPartOf` the site's `WebSite` entity.
+- **Article JSON-LD schema, added manually per post** (the site runs RankMath, but this schema was hand-crafted rather than plugin-generated): headline, URL, `mainEntityOfPage`, `datePublished`, `dateModified`, `lastReviewed`, `author` as a `Person` (linked to the attorney's about page, `worksFor` the `LegalService` "McCranie Law Firm"), `publisher` `Organization` with logo, `inLanguage`, and `isPartOf` the site's `WebSite` entity.
 - **"Related Georgia Legal Resources" internal-links module** pointing to the firm's criminal-defense money pages.
 - **Authoritative outbound citations** to official legal sources (e.g., O.C.G.A. Title 16 on Justia).
 
 **Outcome:** Verified live on the site — bio, dateline, schema, internal links, and citations all render on the published posts, and the WordPress API confirms the archive-wide modification run on Aug 4.
+**Follow-up:** Confirm RankMath's Article schema module is disabled for posts (Titles & Meta → Posts → Schema Type → None) so the hand-crafted schema is the single source of truth — otherwise each post emits two Article blocks and Google chooses which author entity to believe.
 **Why it matters (SEO + AI SEO + conversions):** Google's quality systems and AI assistants both weigh E-E-A-T — *who* wrote the content and what their credentials are. The author bio and Person/LegalService schema tie every article to a named, credentialed attorney entity; `lastReviewed` datelines signal content freshness; internal links funnel the archive's authority into the pages that convert; and citations to primary legal sources are exactly what AI models look for when deciding which content to trust and quote. This work directly supports the 84% ChatGPT Share of AI Voice measured the same day (item 11).
 
 ### 12b. Additional owner-level site changes via the site API (Aug 4–6)
