@@ -59,9 +59,20 @@ Ran a companion 5×5 geo-grid scan (25 points, 5-mile radius) of **ChatGPT's ans
 **Outcome:** **84% Share of AI Voice, average rank 1.43 when mentioned, appearing in 21 of 25 grid points** — the firm is the answer ChatGPT most often gives for DUI representation in its market.
 **Why it matters (AI SEO):** A growing share of prospects now ask AI assistants instead of Google. This scan measures whether the firm is actually being *recommended* by AI (not merely indexed — the exact distinction we raised in the Updating.AI evaluation) and gives us a tracked baseline to grow the remaining 16%.
 
-### 12. Direct on-site optimizations via the site API (Aug 4–6)
-Performed owner-level site changes through the website's API as part of the ongoing optimization push.
-**Why it matters (SEO):** API-level changes allowed fast turnaround on optimization items without waiting on the standard production queue.
+### 12. Sitewide blog upgrade — author bios, schema, internal links, citations on every post (Aug 1–4)
+Executed a full E-E-A-T and structured-data upgrade across the **entire blog archive (~210 posts)** via the WordPress REST API. A small 5-post batch ran Aug 1, a 3-post pilot validated the template on Aug 3, and the full rollout ran Aug 4 (posts updated roughly every 12 seconds over about an hour). Each post received:
+
+- **"About the author" bio block** — George F. McCranie IV, Founder; admitted to the Georgia State Bar 1996; former Assistant District Attorney, Alapaha Judicial Circuit; member of the National College for DUI Defense; fellow of the Lawyers Foundation of Georgia; former State Bar of Georgia Board of Governors member.
+- **"Published / Last reviewed" dateline** with machine-readable `<time>` markup (e.g., "Published 2018-06-06 · Last reviewed August 3, 2026").
+- **Article JSON-LD schema** embedded per post: headline, URL, `mainEntityOfPage`, `datePublished`, `dateModified`, `lastReviewed`, `author` as a `Person` (linked to the attorney's about page, `worksFor` the `LegalService` "McCranie Law Firm"), `publisher` `Organization` with logo, `inLanguage`, and `isPartOf` the site's `WebSite` entity.
+- **"Related Georgia Legal Resources" internal-links module** pointing to the firm's criminal-defense money pages.
+- **Authoritative outbound citations** to official legal sources (e.g., O.C.G.A. Title 16 on Justia).
+
+**Outcome:** Verified live on the site — bio, dateline, schema, internal links, and citations all render on the published posts, and the WordPress API confirms the archive-wide modification run on Aug 4.
+**Why it matters (SEO + AI SEO + conversions):** Google's quality systems and AI assistants both weigh E-E-A-T — *who* wrote the content and what their credentials are. The author bio and Person/LegalService schema tie every article to a named, credentialed attorney entity; `lastReviewed` datelines signal content freshness; internal links funnel the archive's authority into the pages that convert; and citations to primary legal sources are exactly what AI models look for when deciding which content to trust and quote. This work directly supports the 84% ChatGPT Share of AI Voice measured the same day (item 11).
+
+### 12b. Additional owner-level site changes via the site API (Aug 4–6)
+Beyond the blog rollout, performed further direct site changes through the website's API as part of the optimization push, ahead of the standard production queue.
 
 ### 13. New criminal-defense landing page — built and shipped (Aug 6–7)
 Drafted the page copy (working docs created Aug 6–7), built the new criminal-defense landing page, and shared the live link with the firm.
@@ -132,4 +143,5 @@ Compiled the "McCranie Leads August 12 2026" folder with the current lead export
 | Organic search | Clicks +87% YoY; avg position 30.2 → 10.6 |
 | Leads | +60% YoY (May–Jul); LSA calls 19 → 418; new landing page already converting |
 | Reputation | Valdosta profile 4.8★/122 → 4.9★/128 |
+| Content / E-E-A-T | ~210 blog posts upgraded with author bios, Article + Person/LegalService schema, review datelines, internal links, and legal citations |
 | Risk cleanup | LSA misconfiguration dated (Jul 16) and fixed; unknown account user flagged; Gainesville footprint retirement underway |
